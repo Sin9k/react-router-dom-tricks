@@ -1,19 +1,18 @@
 import React, { useContext } from "react";
-import { withRouter, Switch, Route, Redirect } from "react-router-dom";
+import { useRouteMatch, Switch, Route, Redirect } from "react-router-dom";
 
 import AppBar from "~/components/AppBar";
 import DeviceInfoContext from "~/contexts/DeviceInfoContext";
 
 import Desktop from "../Desktop";
+import ResponsiveList from "../ResponsiveList";
 
-const ResponsiveList = () => <div>ResponsiveList</div>;
 const ResponsiveFilter = () => <div>ResponsiveFilter</div>;
 
-const ResponsiveRoutesPage = ({ match }) => {
-  const { url } = match;
+const ResponsiveRoutesPage = () => {
+  const { url } = useRouteMatch();
 
   const deviceInfo = useContext(DeviceInfoContext);
-
   return (
     <>
       <AppBar />
@@ -26,11 +25,11 @@ const ResponsiveRoutesPage = ({ match }) => {
         </Switch>
       ) : (
         <Switch>
+          <Route exact path={`${url}/filters`}>
+            <ResponsiveFilter />
+          </Route>
           <Route exact path={`${url}/list`}>
             <ResponsiveList />
-          </Route>
-          <Route exact path={`${url}/filter`}>
-            <ResponsiveFilter />
           </Route>
           <Redirect to={`${url}/list`} />
         </Switch>
@@ -39,4 +38,4 @@ const ResponsiveRoutesPage = ({ match }) => {
   );
 };
 
-export default withRouter(ResponsiveRoutesPage);
+export default ResponsiveRoutesPage;
