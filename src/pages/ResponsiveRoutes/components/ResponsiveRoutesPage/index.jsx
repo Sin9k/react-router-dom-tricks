@@ -6,8 +6,8 @@ import DeviceInfoContext from "~/contexts/DeviceInfoContext";
 
 import Desktop from "../Desktop";
 import ResponsiveList from "../ResponsiveList";
-
-const ResponsiveFilter = () => <div>ResponsiveFilter</div>;
+import ResponsiveFilters from "../ResponsiveFilters";
+import ResponsiveFilter from "../ResponsiveFilter";
 
 const ResponsiveRoutesPage = () => {
   const { url } = useRouteMatch();
@@ -25,8 +25,11 @@ const ResponsiveRoutesPage = () => {
         </Switch>
       ) : (
         <Switch>
-          <Route exact path={`${url}/filters`}>
+          <Route exact path={`${url}/filters/:type`}>
             <ResponsiveFilter />
+          </Route>
+          <Route exact path={`${url}/filters`}>
+            <ResponsiveFilters />
           </Route>
           <Route exact path={`${url}/list`}>
             <ResponsiveList />

@@ -3,22 +3,22 @@ import Slider from "@material-ui/core/Slider";
 
 import useStyles from "./styles";
 
-const Year = () => {
+const Miles = () => {
   const styles = useStyles();
 
   return (
     <div className={styles.container}>
       <Slider
-        defaultValue={0}
-        getAriaValueText={value => `${value} Year`}
-        valueLabelDisplay="auto"
-        step={1}
+        defaultValue={30}
+        getAriaValueText={value => `${value} miles`}
+        valueLabelDisplay="on"
+        step={10}
         marks
-        min={1990}
-        max={2020}
+        min={0}
+        max={1000}
       />
     </div>
   );
 };
 
-export default Year;
+export default Miles;

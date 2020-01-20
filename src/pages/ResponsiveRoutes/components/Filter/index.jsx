@@ -17,7 +17,7 @@ const TypeComponent = {
   year: Year
 };
 
-const Filters = ({ type }) => {
+const Filter = ({ type }) => {
   const styles = useStyles();
 
   const Component = TypeComponent[type];
@@ -25,4 +25,4 @@ const Filters = ({ type }) => {
   return <div className={styles.container}>{<Component />}</div>;
 };
 
-export default Filters;
+export default Filter;

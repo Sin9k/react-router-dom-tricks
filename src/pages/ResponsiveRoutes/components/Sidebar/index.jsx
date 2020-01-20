@@ -5,7 +5,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Popover from "@material-ui/core/Popover";
 import Divider from "@material-ui/core/Divider";
 
-import Filters from "../Filters";
+import Filter from "../Filter";
 import useStyles from "./styles";
 
 const Sidebar = () => {
@@ -66,7 +66,7 @@ const Sidebar = () => {
           horizontal: "left"
         }}
       >
-        <Filters type={type} />
+        <Filter type={type} />
       </Popover>
     </>
   );
