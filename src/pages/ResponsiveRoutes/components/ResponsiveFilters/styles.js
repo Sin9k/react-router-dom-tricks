@@ -1,13 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
-  "@global": {
-    body: {
-      margin: 0
-    }
+  button: {
+    margin: "16px 16px 0"
+  },
+  title: {
+    padding: "0 16px"
   },
   container: {
-    minWidth: "100vw",
-    minHeight: "100vh"
+    background: "#f6f6f6",
+    padding: 0
   }
 }));
