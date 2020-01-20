@@ -1,6 +1,7 @@
 {
   "name": "react-router-dom-tricks",
-  "version": "0.1.0",
+  "homepage": "https://sin9k.github.io/react-router-dom-tricks",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@babel/core": "7.7.4",
@@ -67,7 +68,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -136,5 +139,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
