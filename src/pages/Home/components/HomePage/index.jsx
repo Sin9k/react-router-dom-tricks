@@ -20,6 +20,11 @@ const HomePage = () => {
               Responsive Routes
             </Button>
           </li>
+          <li>
+            <Button component={Link} to="/popups-routes" color="primary">
+              Popups Routes
+            </Button>
+          </li>
         </ul>
       </div>
     </>

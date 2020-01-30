@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "~/pages/Home";
 import ResponsiveRoutes from "~/pages/ResponsiveRoutes";
+import PopupsRoutes from "~/pages/PopupsRoutes";
 
 const Router = () => {
   return (
@@ -13,6 +14,9 @@ const Router = () => {
         </Route>
         <Route path="/responsive-routes">
           <ResponsiveRoutes />
+        </Route>
+        <Route path="/popups-routes">
+          <PopupsRoutes />
         </Route>
       </Switch>
     </BrowserRouter>
