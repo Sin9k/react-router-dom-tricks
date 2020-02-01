@@ -5,6 +5,7 @@ import AppBar from "~/components/AppBar";
 
 import Posts from "../Posts";
 import Post from "../Post";
+import GetParameterPopups from "../GetParameterPopups";
 
 const ResponsiveRoutesPage = () => {
   const { url } = useRouteMatch();
@@ -21,6 +22,7 @@ const ResponsiveRoutesPage = () => {
         </Route>
         <Redirect to={`${url}/posts`} />
       </Switch>
+      <GetParameterPopups />
     </>
   );
 };

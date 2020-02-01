@@ -1,6 +1,6 @@
 /* global parseInt */
 import React from "react";
-import { useParams, withRouter } from "react-router-dom";
+import { useParams, withRouter, Link, useRouteMatch } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -12,6 +12,7 @@ import PostCard from "./PostCard";
 import useStyles from "./styles";
 
 const Post = ({ history }) => {
+  const { url } = useRouteMatch();
   const { id } = useParams();
   const styles = useStyles();
 
@@ -38,6 +39,8 @@ const Post = ({ history }) => {
           color="secondary"
           className={styles.button}
           startIcon={<DeleteIcon />}
+          component={Link}
+          to={`${url}?popup=sign-in`}
         >
           Sign In
         </Button>
@@ -46,6 +49,8 @@ const Post = ({ history }) => {
           color="primary"
           className={styles.button}
           endIcon={<SaveIcon />}
+          component={Link}
+          to={`${url}?popup=sign-up`}
         >
           Sign Up
         </Button>
@@ -54,6 +59,8 @@ const Post = ({ history }) => {
           color="default"
           className={styles.button}
           startIcon={<CloudUploadIcon />}
+          component={Link}
+          to={`${url}?popup=notifications`}
         >
           Notifications
         </Button>

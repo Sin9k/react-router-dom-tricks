@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "avatar": "https://material-ui.com/static/images/avatar/1.jpg",
+    "title": "Brunch this weekend?",
+    "user": "Ali Connors",
+    "shortText": "I'll be in your neighborhood doing errands in this…",
+    "fullText": "I'll be in your neighborhood doing errands in this weekend and one more thing what i want to say"
+  },
+  {
+    "id": 2,
+    "avatar": "https://material-ui.com/static/images/avatar/2.jpg",
+    "title": "Summer BBQ",
+    "user": "to Scott, Alex, Jennifer",
+    "shortText": "Wish I could come, but I'm out of town this…",
+    "fullText": "Wish I could come, but I'm out of town this weekend but i need to ask you something important"
+  },
+  {
+    "id": 3,
+    "avatar": "https://material-ui.com/static/images/avatar/3.jpg",
+    "title": "Oui Oui",
+    "user": "Sandra Adams",
+    "shortText": "Do you have Paris recommendations? Have you ever…",
+    "fullText": "Do you have Paris recommendations? Have you ever been in Belarus? or it's not important for you today?"
+  }
+]

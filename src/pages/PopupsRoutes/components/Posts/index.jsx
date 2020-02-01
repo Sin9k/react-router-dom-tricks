@@ -11,20 +11,37 @@ import Typography from "@material-ui/core/Typography";
 import posts from "../../data/posts";
 import useStyles from "./styles";
 
-const ResponsiveRoutesPage = () => {
+const Posts = () => {
   const { url } = useRouteMatch();
   const styles = useStyles();
 
   return (
     <div className={styles.container}>
       <div>
-        <Button variant="contained" className={styles.button}>
+        <Button
+          variant="contained"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=sign-in`}
+        >
           Sign In
         </Button>
-        <Button variant="contained" color="primary" className={styles.button}>
+        <Button
+          variant="contained"
+          color="primary"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=sign-up`}
+        >
           Sign Up
         </Button>
-        <Button variant="contained" color="secondary" className={styles.button}>
+        <Button
+          variant="contained"
+          color="secondary"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=notifications`}
+        >
           Notifications
         </Button>
       </div>
@@ -61,13 +78,30 @@ const ResponsiveRoutesPage = () => {
         })}
       </div>
       <div>
-        <Button variant="outlined" className={styles.button}>
+        <Button
+          variant="outlined"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=sign-in`}
+        >
           Sign In
         </Button>
-        <Button variant="outlined" color="primary" className={styles.button}>
+        <Button
+          variant="outlined"
+          color="primary"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=sign-up`}
+        >
           Sign Up
         </Button>
-        <Button variant="outlined" color="secondary" className={styles.button}>
+        <Button
+          variant="outlined"
+          color="secondary"
+          className={styles.button}
+          component={Link}
+          to={`${url}?popup=notifications`}
+        >
           Notifications
         </Button>
       </div>
@@ -75,4 +109,4 @@ const ResponsiveRoutesPage = () => {
   );
 };
 
-export default ResponsiveRoutesPage;
+export default Posts;
