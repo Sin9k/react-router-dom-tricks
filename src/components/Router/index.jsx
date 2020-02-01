@@ -4,9 +4,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "~/pages/Home";
 import ResponsiveRoutes from "~/pages/ResponsiveRoutes";
 
+import AppBar from "../AppBar";
+
 const Router = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <AppBar />
       <Switch>
         <Route exact path="/">
           <Home />
