@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - hotfix/github-actions
+      - master
 
 name: Deploy to Amazon EC2
 
