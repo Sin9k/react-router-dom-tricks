@@ -10,7 +10,7 @@ const SignIn = ({ history, isOpened }) => {
   const styles = useStyles();
 
   return (
-    <Dialog onClose={history.goBack} open={Boolean(isOpened)}>
+    <Dialog onClose={history.goBack} open={isOpened}>
       <form noValidate autoComplete="off" className={styles.container}>
         <h2>Sign In</h2>
         <TextField label="Username" className={styles.field} />
