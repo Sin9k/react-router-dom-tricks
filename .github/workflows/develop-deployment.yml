@@ -37,7 +37,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           local: ./build
-          remote: /home/ubuntu/projects/stage-sin9k
+          remote: /var/www/stage-sin9k
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.SERVER_SSH_KEY }}
