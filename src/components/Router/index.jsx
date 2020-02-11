@@ -9,7 +9,7 @@ import AppBar from "../AppBar";
 
 const Router = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <AppBar />
       <Switch>
         <Route exact path="/">

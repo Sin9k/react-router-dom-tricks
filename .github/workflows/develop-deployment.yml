@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - develop
+
+name: Deploy to stage Amazon EC2
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Nodejs 12.14.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.14.0
+
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: install and build
+        run: |
+          npm install
+          npm run build
+        env:
+          CI: true
+
+      - name: deploy
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: ./build
+          remote: /var/www/stage-sin9k
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          privateKey: ${{ secrets.SERVER_SSH_KEY }}
