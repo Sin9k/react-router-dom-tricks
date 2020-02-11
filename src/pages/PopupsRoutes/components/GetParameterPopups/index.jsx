@@ -1,46 +1,27 @@
-/* global clearTimeout */
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 
-import useGetPopupName from "../../hooks/useGetPopupName";
+import useGetPopupState from "./hooks/useGetPopupState";
+
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Notifications from "./Notifications";
 
-let timeout;
+const popups = {
+  "sign-in": SignIn,
+  "sign-up": SignUp,
+  notifications: Notifications
+};
 
 const GetParameterPopups = () => {
-  const popupName = useGetPopupName();
-  const [mountedPopup, setMountedPopup] = useState(popupName);
+  const { mountedPopup, isOpened } = useGetPopupState();
 
-  useEffect(() => {
-    if (popupName) {
-      timeout && clearTimeout(timeout);
-      setMountedPopup(popupName);
-    } else {
-      timeout = setTimeout(() => {
-        setMountedPopup(null);
-      }, 3000);
-    }
-  }, [popupName]);
+  const Component = popups[mountedPopup];
 
-  useEffect(() => {
-    return () => {
-      timeout && clearTimeout(timeout);
-    };
-  }, []);
-
-  const isOpened = useMemo(() => Boolean(popupName), [popupName]);
-
-  switch (mountedPopup) {
-    case "sign-in":
-      return <SignIn isOpened={isOpened} />;
-    case "sign-up":
-      return <SignUp isOpened={isOpened} />;
-    case "notifications":
-      return <Notifications isOpened={isOpened} />;
-    default:
-      return null;
+  if (!Component) {
+    return null;
   }
+
+  return <Component isOpened={isOpened} />;
 };
 
 export default GetParameterPopups;

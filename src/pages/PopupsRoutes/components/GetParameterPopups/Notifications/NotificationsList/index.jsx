@@ -20,7 +20,7 @@ const NotificationsList = () => {
       {notifications.map((notification, index, notifications) => {
         const isLastNotification = notifications.length - 1 !== index;
         const query = new URLSearchParams(search);
-        query.set("notification_id", notification.id);
+        query.set("notification-id", notification.id);
 
         return (
           <Fragment key={notification.id}>

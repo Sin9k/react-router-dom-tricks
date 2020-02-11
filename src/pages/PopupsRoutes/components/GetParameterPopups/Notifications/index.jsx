@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import Dialog from "@material-ui/core/Dialog";
 
-import useGetNotificationId from "../../../hooks/useGetNotificationId";
+import useGetParameter from "~/hooks/router/useGetParameter";
 import NotificationsList from "./NotificationsList";
 import NotificationDetails from "./NotificationDetails";
 import useStyles from "./styles";
 
 const Notifications = ({ history, isOpened }) => {
-  const notificationId = useGetNotificationId();
+  const notificationId = useGetParameter("notification-id");
   const [id, setId] = useState(notificationId);
   const styles = useStyles();
 
