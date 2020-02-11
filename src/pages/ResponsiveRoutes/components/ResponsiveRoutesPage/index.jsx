@@ -14,10 +14,10 @@ const ResponsiveRoutesPage = () => {
   const deviceInfo = useContext(DeviceInfoContext);
   return deviceInfo.isDesktop ? (
     <Switch>
-      <Route exact path={`${url}`}>
+      <Route exact path={url}>
         <Desktop />
       </Route>
-      <Redirect to={`${url}`} />
+      <Redirect to={url} />
     </Switch>
   ) : (
     <Switch>
