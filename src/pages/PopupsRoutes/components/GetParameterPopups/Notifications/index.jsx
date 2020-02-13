@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 import Dialog from "@material-ui/core/Dialog";
 
+import { GET_PARAMS } from "~/const/router";
 import useGetParameter from "~/hooks/router/useGetParameter";
 import NotificationsList from "./NotificationsList";
 import NotificationDetails from "./NotificationDetails";
 import useStyles from "./styles";
 
-const Notifications = ({ history, isOpened }) => {
-  const notificationId = useGetParameter("notification-id");
+const Notifications = ({ isOpened }) => {
+  const notificationId = useGetParameter(GET_PARAMS.notificationId);
+  const history = useHistory();
   const [id, setId] = useState(notificationId);
   const styles = useStyles();
 
@@ -34,4 +37,4 @@ const Notifications = ({ history, isOpened }) => {
   );
 };
 
-export default withRouter(Notifications);
+export default Notifications;

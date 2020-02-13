@@ -1,5 +1,7 @@
 import React from "react";
-import { Route, Link, useRouteMatch, withRouter } from "react-router-dom";
+import { Route, Link, useHistory } from "react-router-dom";
+
+import usePrepareLink from "~/hooks/router/usePrepareLink";
 
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -13,9 +15,19 @@ import useStyles from "./styles";
 import LikesPopup from "./LikesPopup";
 import ViewersPopup from "./ViewersPopup";
 
-const PostCard = ({ post, history }) => {
-  const { url } = useRouteMatch();
+const PostCard = ({ post }) => {
   const styles = useStyles();
+  const history = useHistory();
+
+  const likesLink = usePrepareLink({
+    to: "/likes",
+    isRelativePath: true
+  });
+
+  const viewersLink = usePrepareLink({
+    to: "/viewers",
+    isRelativePath: true
+  });
 
   return (
     <>
@@ -34,26 +46,21 @@ const PostCard = ({ post, history }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button
-            size="small"
-            color="primary"
-            component={Link}
-            to={`${url}/likes`}
-          >
+          <Button size="small" color="primary" component={Link} to={likesLink}>
             Likes
           </Button>
           <Button
             size="small"
             color="primary"
             component={Link}
-            to={`${url}/viewers`}
+            to={viewersLink}
           >
             Viewers
           </Button>
         </CardActions>
       </Card>
       <Route
-        path={`${url}/likes`}
+        path={likesLink}
         children={({ match }) => {
           return (
             <Dialog onClose={history.goBack} open={Boolean(match)}>
@@ -63,7 +70,7 @@ const PostCard = ({ post, history }) => {
         }}
       />
       <Route
-        path={`${url}/viewers`}
+        path={viewersLink}
         children={({ match }) => {
           return (
             <Dialog onClose={history.goBack} open={Boolean(match)}>
@@ -76,4 +83,4 @@ const PostCard = ({ post, history }) => {
   );
 };
 
-export default withRouter(PostCard);
+export default PostCard;

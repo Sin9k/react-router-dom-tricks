@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 
+import usePrepareLink from "~/hooks/router/usePrepareLink";
+import { GET_PARAMS, GET_ENUMS } from "~/const/router";
+
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -12,8 +15,24 @@ import posts from "../../data/posts";
 import useStyles from "./styles";
 
 const Posts = () => {
-  const { url } = useRouteMatch();
   const styles = useStyles();
+  const { url } = useRouteMatch();
+
+  const signInLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn
+    }
+  });
+  const signUpLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp
+    }
+  });
+  const notificationsLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications
+    }
+  });
 
   return (
     <div className={styles.container}>
@@ -22,7 +41,7 @@ const Posts = () => {
           variant="contained"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=sign-in`}
+          to={signInLink}
         >
           Sign In
         </Button>
@@ -31,7 +50,7 @@ const Posts = () => {
           color="primary"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=sign-up`}
+          to={signUpLink}
         >
           Sign Up
         </Button>
@@ -40,7 +59,7 @@ const Posts = () => {
           color="secondary"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=notifications`}
+          to={notificationsLink}
         >
           Notifications
         </Button>
@@ -82,7 +101,7 @@ const Posts = () => {
           variant="outlined"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=sign-in`}
+          to={signInLink}
         >
           Sign In
         </Button>
@@ -91,7 +110,7 @@ const Posts = () => {
           color="primary"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=sign-up`}
+          to={signUpLink}
         >
           Sign Up
         </Button>
@@ -100,7 +119,7 @@ const Posts = () => {
           color="secondary"
           className={styles.button}
           component={Link}
-          to={`${url}?popup=notifications`}
+          to={notificationsLink}
         >
           Notifications
         </Button>

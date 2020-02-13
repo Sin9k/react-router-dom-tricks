@@ -1,6 +1,9 @@
 /* global parseInt */
 import React from "react";
-import { useParams, withRouter, Link, useRouteMatch } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
+
+import usePrepareLink from "~/hooks/router/usePrepareLink";
+import { GET_PARAMS, GET_ENUMS } from "~/const/router";
 
 import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -11,10 +14,26 @@ import posts from "../../data/posts";
 import PostCard from "./PostCard";
 import useStyles from "./styles";
 
-const Post = ({ history }) => {
-  const { url } = useRouteMatch();
+const Post = () => {
   const { id } = useParams();
+  const history = useHistory();
   const styles = useStyles();
+
+  const signInLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn
+    }
+  });
+  const signUpLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp
+    }
+  });
+  const notificationsLink = usePrepareLink({
+    query: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications
+    }
+  });
 
   const post = posts.find(post => post.id === parseInt(id));
 
@@ -40,7 +59,7 @@ const Post = ({ history }) => {
           className={styles.button}
           startIcon={<DeleteIcon />}
           component={Link}
-          to={`${url}?popup=sign-in`}
+          to={signInLink}
         >
           Sign In
         </Button>
@@ -50,7 +69,7 @@ const Post = ({ history }) => {
           className={styles.button}
           endIcon={<SaveIcon />}
           component={Link}
-          to={`${url}?popup=sign-up`}
+          to={signUpLink}
         >
           Sign Up
         </Button>
@@ -60,7 +79,7 @@ const Post = ({ history }) => {
           className={styles.button}
           startIcon={<CloudUploadIcon />}
           component={Link}
-          to={`${url}?popup=notifications`}
+          to={notificationsLink}
         >
           Notifications
         </Button>
@@ -69,4 +88,4 @@ const Post = ({ history }) => {
   );
 };
 
-export default withRouter(Post);
+export default Post;

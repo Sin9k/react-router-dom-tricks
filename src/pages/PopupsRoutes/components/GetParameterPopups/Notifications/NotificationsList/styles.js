@@ -5,13 +5,5 @@ export default makeStyles(theme => ({
     width: 300,
     backgroundColor: theme.palette.background.paper,
     flexShrink: 0
-  },
-  inline: {
-    display: "inline"
-  },
-  item: {
-    "&:hover": {
-      backgroundColor: "#f0f0f0"
-    }
   }
 }));

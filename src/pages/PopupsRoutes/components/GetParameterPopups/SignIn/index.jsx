@@ -1,13 +1,14 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Dialog from "@material-ui/core/Dialog";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 import useStyles from "./styles";
 
-const SignIn = ({ history, isOpened }) => {
+const SignIn = ({ isOpened }) => {
   const styles = useStyles();
+  const history = useHistory();
 
   return (
     <Dialog onClose={history.goBack} open={isOpened}>
@@ -28,4 +29,4 @@ const SignIn = ({ history, isOpened }) => {
   );
 };
 
-export default withRouter(SignIn);
+export default SignIn;

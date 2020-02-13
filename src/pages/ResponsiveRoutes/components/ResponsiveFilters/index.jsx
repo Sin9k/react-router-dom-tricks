@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useRouteMatch, withRouter } from "react-router-dom";
+import { Link, useRouteMatch, useHistory } from "react-router-dom";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -8,9 +8,10 @@ import Button from "@material-ui/core/Button";
 
 import useStyles from "./styles";
 
-const ResponsiveFilters = ({ history }) => {
+const ResponsiveFilters = () => {
   const styles = useStyles();
   const { url } = useRouteMatch();
+  const history = useHistory();
 
   return (
     <>
@@ -52,4 +53,4 @@ const ResponsiveFilters = ({ history }) => {
   );
 };
 
-export default withRouter(ResponsiveFilters);
+export default ResponsiveFilters;
