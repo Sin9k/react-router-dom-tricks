@@ -1,17 +1,19 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useRouteMatch } from "react-router-dom";
 
 export default ({
   to,
   isRelativePath = false,
   query = {},
-  keepOldQuery = false
+  keepOldQuery = false,
+  state = {}
 }) => {
   const location = useLocation();
+  const match = useRouteMatch();
 
   let pathname;
 
   if (isRelativePath) {
-    pathname = location.pathname + to;
+    pathname = match.url + to;
   } else {
     pathname = to || location.pathname;
   }
@@ -24,5 +26,9 @@ export default ({
     newQuery.set(key, value);
   });
 
-  return newQuery.toString() ? `${pathname}?${newQuery.toString()}` : pathname;
+  return {
+    pathname,
+    search: newQuery.toString() ? `?${newQuery.toString()}` : "",
+    state
+  };
 };

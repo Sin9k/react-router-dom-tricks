@@ -60,7 +60,7 @@ const PostCard = ({ post }) => {
         </CardActions>
       </Card>
       <Route
-        path={likesLink}
+        path={likesLink.pathname}
         children={({ match }) => {
           return (
             <Dialog onClose={history.goBack} open={Boolean(match)}>
@@ -70,7 +70,7 @@ const PostCard = ({ post }) => {
         }}
       />
       <Route
-        path={viewersLink}
+        path={viewersLink.pathname}
         children={({ match }) => {
           return (
             <Dialog onClose={history.goBack} open={Boolean(match)}>
