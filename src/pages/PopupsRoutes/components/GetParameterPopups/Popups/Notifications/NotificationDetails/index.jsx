@@ -5,7 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 
-import notifications from "../../../../data/notifications";
+import notifications from "../../../../../data/notifications";
 import useStyles from "./styles";
 
 const NotificationDetails = ({ notificationId }) => {

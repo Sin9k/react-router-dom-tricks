@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 
-import notifications from "../../../../data/notifications";
+import notifications from "../../../../../data/notifications";
 import NotificationItem from "./NotificationItem";
 import useStyles from "./styles";
 

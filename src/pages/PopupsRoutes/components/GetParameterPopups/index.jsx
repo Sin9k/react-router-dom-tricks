@@ -3,9 +3,9 @@ import React from "react";
 import { GET_ENUMS } from "~/const/router";
 
 import useGetPopupState from "./hooks/useGetPopupState";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
-import Notifications from "./Notifications";
+import SignIn from "./Popups/SignIn";
+import SignUp from "./Popups/SignUp";
+import Notifications from "./Popups/Notifications";
 
 const popups = {
   [GET_ENUMS.popup.signIn]: SignIn,
