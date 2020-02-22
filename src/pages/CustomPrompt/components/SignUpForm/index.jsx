@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 
 import DeviceInfoContext from "~/contexts/DeviceInfoContext";
 
+import usePreventReload from "./usePreventReload";
 import useFormState from "./useFormState";
 import useStyles from "./styles";
 
@@ -22,6 +23,8 @@ const SignUpForm = () => {
   });
 
   const isEmpty = Object.keys(fields).length === 0;
+
+  usePreventReload(isEmpty);
 
   const promptMessage = useMemo(() => JSON.stringify({ fields }), [fields]);
 
