@@ -8,12 +8,10 @@ export default isEmpty => {
 
   useEffect(() => {
     if (!isEmpty) {
-      console.log("ADD");
       window.addEventListener("beforeunload", preventReload);
     }
     return () => {
       if (!isEmpty) {
-        console.log("REMOVE");
         window.removeEventListener("beforeunload", preventReload);
       }
     };
