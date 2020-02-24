@@ -63,7 +63,11 @@ const PostCard = ({ post }) => {
         path={likesLink.pathname}
         children={({ match }) => {
           return (
-            <Dialog onClose={history.goBack} open={Boolean(match)}>
+            <Dialog
+              onClose={history.goBack}
+              open={Boolean(match)}
+              transitionDuration={6000}
+            >
               <LikesPopup likes={post.likes} />
             </Dialog>
           );
