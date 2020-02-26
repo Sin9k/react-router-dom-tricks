@@ -1,19 +1,19 @@
 import { useEffect, useCallback } from "react";
 
-export default isEmpty => {
+export default isPrenvent => {
   const preventReload = useCallback(event => {
     event.preventDefault();
     event.returnValue = "";
   }, []);
 
   useEffect(() => {
-    if (!isEmpty) {
+    if (isPrenvent) {
       window.addEventListener("beforeunload", preventReload);
     }
     return () => {
-      if (!isEmpty) {
+      if (isPrenvent) {
         window.removeEventListener("beforeunload", preventReload);
       }
     };
-  }, [isEmpty, preventReload]);
+  }, [isPrenvent, preventReload]);
 };
