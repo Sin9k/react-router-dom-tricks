@@ -10,7 +10,7 @@
 ### Popups Routes:
 
 - [RU video](https://youtu.be/4YHnZSMo9vo)
-- EN video
+- [EN video](https://youtu.be/RYo3kwdDdBI)
 - [router children](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/PopupsRoutes/components/Post/PostCard/index.jsx#L62)
 - [GET params config](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/const/router.js#L1)
 - [useGetParameter hook](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/hooks/router/useGetParameter.js#L2)
