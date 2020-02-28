@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useCallback } from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "~/pages/Home";
-import ResponsiveRoutes from "~/pages/ResponsiveRoutes";
-import PopupsRoutes from "~/pages/PopupsRoutes";
+import ResponsiveRoutesPage from "~/pages/ResponsiveRoutes";
+import PopupsRoutesPage from "~/pages/PopupsRoutes";
+import CustomPromptPage from "~/pages/CustomPrompt";
 
 import AppBar from "../AppBar";
+import CustomPrompt from "../CustomPrompt";
 
 const Router = () => {
+  const userConfirmation = useCallback((message, callback) => {
+    const node = document.getElementById("custom-prompt");
+
+    const cleanUp = answer => {
+      ReactDOM.unmountComponentAtNode(node);
+      callback(answer);
+    };
+
+    ReactDOM.render(<CustomPrompt message={message} cleanUp={cleanUp} />, node);
+  }, []);
+
   return (
-    <BrowserRouter>
+    <BrowserRouter getUserConfirmation={userConfirmation}>
       <AppBar />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/responsive-routes">
-          <ResponsiveRoutes />
+          <ResponsiveRoutesPage />
         </Route>
         <Route path="/popups-routes">
-          <PopupsRoutes />
+          <PopupsRoutesPage />
+        </Route>
+        <Route path="/custom-prompt">
+          <CustomPromptPage />
         </Route>
       </Switch>
     </BrowserRouter>
