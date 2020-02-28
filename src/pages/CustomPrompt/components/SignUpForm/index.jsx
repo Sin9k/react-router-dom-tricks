@@ -24,7 +24,7 @@ const SignUpForm = () => {
 
   const isEmpty = Object.keys(fields).length === 0;
 
-  usePreventReload(isEmpty);
+  usePreventReload(!isEmpty);
 
   const promptMessage = useMemo(() => JSON.stringify({ fields }), [fields]);
 
