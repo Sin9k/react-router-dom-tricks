@@ -6,6 +6,7 @@ import Home from "~/pages/Home";
 import ResponsiveRoutesPage from "~/pages/ResponsiveRoutes";
 import PopupsRoutesPage from "~/pages/PopupsRoutes";
 import CustomPromptPage from "~/pages/CustomPrompt";
+import ClosePopupPage from "~/pages/ClosePopup";
 
 import AppBar from "../AppBar";
 import CustomPrompt from "../CustomPrompt";
@@ -37,6 +38,9 @@ const Router = () => {
         </Route>
         <Route path="/custom-prompt">
           <CustomPromptPage />
+        </Route>
+        <Route path="/close-popup">
+          <ClosePopupPage />
         </Route>
       </Switch>
     </BrowserRouter>
