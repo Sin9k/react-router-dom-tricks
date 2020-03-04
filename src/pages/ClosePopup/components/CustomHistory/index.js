@@ -6,8 +6,8 @@ import Dialog from "@material-ui/core/Dialog";
 
 import usePrepareLink from "~/hooks/router/usePrepareLink";
 
-import useClosePopup from "../../hooks/useClosePopup";
-import usePush from "../../hooks/usePush";
+import useClosePopup from "./hooks/useClosePopup";
+import usePush from "./hooks/usePush";
 
 const CustomHistory = ({ dialogClassName }) => {
   const customHistoryLink = usePrepareLink({
@@ -24,7 +24,7 @@ const CustomHistory = ({ dialogClassName }) => {
 
   return (
     <>
-      <h3>use custom history for detect goBack or replace by close - </h3>
+      <h3>use custom history to detect goBack or replace by close - </h3>
       <div>
         <Button variant="contained" onClick={openPopup}>
           Custom history

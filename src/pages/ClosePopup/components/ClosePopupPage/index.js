@@ -3,6 +3,7 @@ import React from "react";
 import GoBack from "../GoBack";
 import Push from "../Push";
 import CustomHistory from "../CustomHistory";
+import State from "../State";
 import useStyles from "./styles";
 
 const ClosePopupPage = () => {
@@ -13,6 +14,7 @@ const ClosePopupPage = () => {
       <GoBack dialogClassName={styles.dialog} />
       <Push dialogClassName={styles.dialog} />
       <CustomHistory dialogClassName={styles.dialog} />
+      <State dialogClassName={styles.dialog} />
     </div>
   );
 };
