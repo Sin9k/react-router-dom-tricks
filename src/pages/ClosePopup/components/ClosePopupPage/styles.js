@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles(() => ({
   container: {
     display: "grid",
-    gridTemplateColumns: "250px 200px",
+    gridTemplateColumns: "350px 200px",
     alignItems: "center",
     padding: 20
   },
