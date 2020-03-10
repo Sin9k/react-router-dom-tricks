@@ -42,7 +42,7 @@ const AppBar = () => {
             component={Link}
             to="/"
           >
-            Web Site
+            React Router Tricks
           </Typography>
         </Toolbar>
       </ApplicationBar>
