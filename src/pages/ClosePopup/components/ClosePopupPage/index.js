@@ -2,7 +2,8 @@ import React from "react";
 
 import GoBack from "../GoBack";
 import Push from "../Push";
-import CustomHistory from "../CustomHistory";
+import CustomSessionHistory from "../CustomSessionHistory";
+import CustomReduxHistory from "../CustomReduxHistory";
 import State from "../State";
 import useStyles from "./styles";
 
@@ -13,7 +14,8 @@ const ClosePopupPage = () => {
     <div className={styles.container}>
       <GoBack dialogClassName={styles.dialog} />
       <Push dialogClassName={styles.dialog} />
-      <CustomHistory dialogClassName={styles.dialog} />
+      <CustomSessionHistory dialogClassName={styles.dialog} />
+      <CustomReduxHistory dialogClassName={styles.dialog} />
       <State dialogClassName={styles.dialog} />
     </div>
   );
