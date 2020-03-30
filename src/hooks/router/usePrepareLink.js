@@ -4,6 +4,7 @@ export default ({
   to,
   isRelativePath = false,
   query = {},
+  hash,
   keepOldQuery = false,
   state = {}
 }) => {
@@ -27,8 +28,9 @@ export default ({
   });
 
   return {
-    pathname,
+    pathname: pathname.replace(/\/\//g, "/"),
     search: newQuery.toString() ? `?${newQuery.toString()}` : "",
+    hash,
     state
   };
 };

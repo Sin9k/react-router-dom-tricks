@@ -7,6 +7,7 @@ import ResponsiveRoutesPage from "~/pages/ResponsiveRoutes";
 import PopupsRoutesPage from "~/pages/PopupsRoutes";
 import CustomPromptPage from "~/pages/CustomPrompt";
 import ClosePopupPage from "~/pages/ClosePopup";
+import RestorePreventedRoutePage from "~/pages/RestorePreventedRoute";
 
 import AppBar from "../AppBar";
 import CustomPrompt from "../CustomPrompt";
@@ -41,6 +42,9 @@ const Router = () => {
         </Route>
         <Route path="/close-popup">
           <ClosePopupPage />
+        </Route>
+        <Route path="/restore-prevented-route">
+          <RestorePreventedRoutePage />
         </Route>
       </Switch>
     </BrowserRouter>
