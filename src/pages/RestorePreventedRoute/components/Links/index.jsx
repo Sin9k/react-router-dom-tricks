@@ -20,10 +20,11 @@ const Links = () => {
 
   const booksLink = usePrepareLink({
     to: "/books",
-    query: {
-      animal: "cat"
-    },
-    hash: "#test-hash",
+    isRelativePath: true
+  });
+
+  const foodLink = usePrepareLink({
+    to: "/food",
     isRelativePath: true
   });
 
@@ -60,6 +61,15 @@ const Links = () => {
           className={styles.link}
         >
           Books for authorized users
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={foodLink}
+          activeClassName={styles.active}
+          className={styles.link}
+        >
+          Food for authorized users
         </NavLink>
       </li>
       <li>

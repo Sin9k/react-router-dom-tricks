@@ -7,6 +7,7 @@ import Links from "../Links";
 import Gallery from "../Gallery";
 import Books from "../Books";
 import Login from "../Login";
+import Food from "../Food";
 import useStyles from "./styles";
 
 const RestorePreventedRoutePage = () => {
@@ -27,6 +28,9 @@ const RestorePreventedRoutePage = () => {
         </Route>
         <AuthRoute isAuthorized={isAuthorized} exact path={`${url}/books`}>
           <Books />
+        </AuthRoute>
+        <AuthRoute isAuthorized={isAuthorized} exact path={`${url}/food`}>
+          <Food />
         </AuthRoute>
         <Route exact path={`${url}/login`}>
           <Login
