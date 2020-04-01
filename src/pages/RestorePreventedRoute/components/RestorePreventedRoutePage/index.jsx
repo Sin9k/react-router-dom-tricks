@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch, Route, Redirect, useRouteMatch } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 import AuthRoute from "../AuthRoute";
 import AuthStatus from "../AuthStatus";
@@ -12,7 +12,6 @@ import useStyles from "./styles";
 
 const RestorePreventedRoutePage = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);
-  const { url } = useRouteMatch();
   const styles = useStyles();
 
   return (
@@ -20,25 +19,33 @@ const RestorePreventedRoutePage = () => {
       <AuthStatus isAuthorized={isAuthorized} />
       <Links />
       <Switch>
-        <Route exact path={url}>
+        <Route exact path="/restore-prevented-route">
           <h1 className={styles.title}>HOME PAGE</h1>
         </Route>
-        <Route exact path={`${url}/gallery`}>
+        <Route exact path="/restore-prevented-route/gallery">
           <Gallery />
         </Route>
-        <AuthRoute isAuthorized={isAuthorized} exact path={`${url}/books`}>
+        <AuthRoute
+          isAuthorized={isAuthorized}
+          exact
+          path="/restore-prevented-route/books"
+        >
           <Books />
         </AuthRoute>
-        <AuthRoute isAuthorized={isAuthorized} exact path={`${url}/food`}>
+        <AuthRoute
+          isAuthorized={isAuthorized}
+          exact
+          path="/restore-prevented-route/food"
+        >
           <Food />
         </AuthRoute>
-        <Route exact path={`${url}/login`}>
+        <Route exact path="/restore-prevented-route/login">
           <Login
             isAuthorized={isAuthorized}
             setIsAuthorized={setIsAuthorized}
           />
         </Route>
-        <Redirect to={url} />
+        <Redirect to="/restore-prevented-route" />
       </Switch>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory, Route, Switch } from "react-router-dom";
 
-import Switch from "@material-ui/core/Switch";
+import MaterialSwitch from "@material-ui/core/Switch";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
@@ -27,7 +27,9 @@ const Login = ({ isAuthorized, setIsAuthorized }) => {
     <FormControl component="fieldset">
       <h2>Login</h2>
       <FormControlLabel
-        control={<Switch checked={value} onChange={onChange} color="primary" />}
+        control={
+          <MaterialSwitch checked={value} onChange={onChange} color="primary" />
+        }
         label="Toggle to authorize and press button to apply"
       />
       <Button
@@ -39,6 +41,16 @@ const Login = ({ isAuthorized, setIsAuthorized }) => {
       >
         {isAuthorized ? "Unauthorize" : "Sign In"}
       </Button>
+      {state && state.from && (
+        <Switch location={state.from}>
+          <Route exact path="/restore-prevented-route/books">
+            <h3 className={styles.nextBooks}>The next page is Books!</h3>
+          </Route>
+          <Route exact path="/restore-prevented-route/food">
+            <h3 className={styles.nextFood}>The next page is Food!</h3>
+          </Route>
+        </Switch>
+      )}
     </FormControl>
   );
 };
