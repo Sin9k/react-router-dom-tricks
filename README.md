@@ -21,7 +21,7 @@
 
 ### How to use history.goBack for closing popup
 
-- EN video
+- [EN video](https://youtu.be/tl5_k6YBRKg)
 - [RU video](https://youtu.be/fqYk-b1lhyI)
 
 1. [Use only history.push](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/ClosePopup/components/Push/index.js#L19)
