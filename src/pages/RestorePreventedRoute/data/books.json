@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Code Complete: A Practical Handbook of Software Construction",
+    "img": "https://spzone-simpleprogrammer.netdna-ssl.com/wp-content/uploads/2015/03/codecomplete.jpg",
+    "author": "Steve McConnell"
+  },
+  {
+    "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "img": "https://spzone-simpleprogrammer.netdna-ssl.com/wp-content/uploads/2018/12/Clean-Code.png",
+    "author": "Robert C. Martin"
+  },
+  {
+    "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SX395_BO1,204,203,200_.jpg",
+    "author": "Erich Gamma"
+  },
+  {
+    "title": "Head First Design Patterns: A Brain-Friendly Guide",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61ZG-hATOeL._SX430_BO1,204,203,200_.jpg",
+    "author": "Elisabeth Robson"
+  }
+]

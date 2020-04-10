@@ -2,6 +2,7 @@ import TabletMac from "@material-ui/icons/TabletMac";
 import Web from "@material-ui/icons/Web";
 import AspectRatio from "@material-ui/icons/AspectRatio";
 import Cancel from "@material-ui/icons/Cancel";
+import RestorePage from "@material-ui/icons/RestorePage";
 
 export const TRICKS_ROUTES = [
   {
@@ -23,5 +24,10 @@ export const TRICKS_ROUTES = [
     title: "Close Popup",
     url: "/close-popup",
     Icon: Cancel
+  },
+  {
+    title: "Restore Prevented Route",
+    url: "/restore-prevented-route",
+    Icon: RestorePage
   }
 ];
