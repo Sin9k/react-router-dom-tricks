@@ -55,12 +55,12 @@ const AppBar = () => {
               </ListItemIcon>
               <ListItemText primary="React Router Tricks" />
             </ListItem>
-            {TRICKS_ROUTES.map(trick => (
+            {TRICKS_ROUTES.map((trick) => (
               <ListItem button key={trick.url} component={Link} to={trick.url}>
                 <ListItemIcon>
                   <trick.Icon />
                 </ListItemIcon>
-                <ListItemText primary={trick.title} />
+                <ListItemText primary={trick.shortTitle} />
               </ListItem>
             ))}
           </List>
