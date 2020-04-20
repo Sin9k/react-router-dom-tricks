@@ -58,7 +58,8 @@ export const TRICKS_ROUTES = [
   {
     title: "Redirect After Login",
     shortTitle: "Redirect After Login",
-    description: "",
+    description:
+      "In this video, we will consider another react-router trick. We’ll tell you how to restore the previous URL after a redirect. We will show you how to manage react-router properly in order to be able to create authorized pages. With the help of our demo you can find how to redirect unauthorized users to the sign in page firstly when they go to the authorized page, and only then redirect them exactly to the page that they originally wanted. And also, a lot of other interesting things!",
     url: "/restore-prevented-route",
     Icon: RestorePage,
     image: redirectAfterLogin,

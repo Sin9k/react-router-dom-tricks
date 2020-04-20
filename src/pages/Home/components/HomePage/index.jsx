@@ -26,38 +26,42 @@ const HomePage = () => {
               <h3 className={styles.title}>{trick.title}</h3>
               <p className={styles.description}>{trick.description}</p>
               <p className={styles.social}>
-                <a
-                  href={trick.enYouTube}
-                  onClick={stopPropagation}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.link}
-                >
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    endIcon={<YouTube width="26px" />}
-                    className={styles.youtube}
+                {Boolean(trick.enYouTube) && (
+                  <a
+                    href={trick.enYouTube}
+                    onClick={stopPropagation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
                   >
-                    EN
-                  </Button>
-                </a>
-                <a
-                  href={trick.ruYouTube}
-                  onClick={stopPropagation}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.link}
-                >
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    endIcon={<YouTube width="26px" />}
-                    className={styles.youtube}
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      endIcon={<YouTube width="26px" />}
+                      className={styles.youtube}
+                    >
+                      EN
+                    </Button>
+                  </a>
+                )}
+                {Boolean(trick.ruYouTube) && (
+                  <a
+                    href={trick.ruYouTube}
+                    onClick={stopPropagation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
                   >
-                    RU
-                  </Button>
-                </a>
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      endIcon={<YouTube width="26px" />}
+                      className={styles.youtube}
+                    >
+                      RU
+                    </Button>
+                  </a>
+                )}
               </p>
             </div>
           </Link>
