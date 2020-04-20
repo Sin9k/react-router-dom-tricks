@@ -3,6 +3,7 @@ import Web from "@material-ui/icons/Web";
 import AspectRatio from "@material-ui/icons/AspectRatio";
 import Cancel from "@material-ui/icons/Cancel";
 import RestorePage from "@material-ui/icons/RestorePage";
+import HdrWeak from "@material-ui/icons/HdrWeak";
 
 import responsiveRoutes from "~/assets/images/responsive-routes.png";
 import popusRoutes from "~/assets/images/popus-routes.png";
@@ -64,5 +65,15 @@ export const TRICKS_ROUTES = [
     image: redirectAfterLogin,
     enYouTube: "",
     ruYouTube: "https://youtu.be/7Ot95R_TP4g",
+  },
+  {
+    title: "Perfect stepper",
+    shortTitle: "Perfect stepper",
+    description: "",
+    url: "/stepper",
+    Icon: HdrWeak,
+    image: "",
+    enYouTube: "",
+    ruYouTube: "",
   },
 ];
