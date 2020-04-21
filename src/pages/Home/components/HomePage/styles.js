@@ -60,8 +60,6 @@ export default makeStyles(() => ({
   },
   link: {
     textDecoration: "none",
-  },
-  youtube: {
     marginRight: 12,
   },
 }));

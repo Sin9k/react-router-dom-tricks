@@ -52,3 +52,13 @@
 - [Custom Prompt](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/components/CustomPrompt/index.jsx#L10)
 - [usePreventReload](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/CustomPrompt/components/SignUpForm/usePreventReload.js#L3)
 - [MDN beforeunload](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload)
+
+### Redirect After Login
+
+- EN video
+- [RU video](https://youtu.be/7Ot95R_TP4g)
+- [Router src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/RestorePreventedRoutePage/index.jsx#L21)
+- [AuthRoute src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/AuthRoute/index.jsx)
+- [react-router Redirect (Auth)](https://reacttraining.com/react-router/web/example/auth-workflow)
+- [SignIn src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/Login/index.jsx#L18)
+- [Switcher src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/Login/index.jsx#L44)

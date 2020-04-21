@@ -2,7 +2,7 @@ import TabletMac from "@material-ui/icons/TabletMac";
 import Web from "@material-ui/icons/Web";
 import AspectRatio from "@material-ui/icons/AspectRatio";
 import Cancel from "@material-ui/icons/Cancel";
-import RestorePage from "@material-ui/icons/RestorePage";
+import Save from "@material-ui/icons/Save";
 import HdrWeak from "@material-ui/icons/HdrWeak";
 
 import responsiveRoutes from "~/assets/images/responsive-routes.png";
@@ -10,6 +10,7 @@ import popusRoutes from "~/assets/images/popus-routes.png";
 import customPrompt from "~/assets/images/custom-prompt.png";
 import closePopup from "~/assets/images/close-popup.png";
 import redirectAfterLogin from "~/assets/images/redirect-after-login.png";
+import multiStepForm from "~/assets/images/multi-step-form.png";
 
 export const TRICKS_ROUTES = [
   {
@@ -22,6 +23,8 @@ export const TRICKS_ROUTES = [
     image: responsiveRoutes,
     enYouTube: "https://youtu.be/X3zE2eIpUmk",
     ruYouTube: "https://youtu.be/FtYzwa0DjW8",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#responsive-routes",
   },
   {
     title: "Managing pop-ups using react-router",
@@ -33,6 +36,7 @@ export const TRICKS_ROUTES = [
     image: popusRoutes,
     enYouTube: "https://youtu.be/RYo3kwdDdBI",
     ruYouTube: "https://youtu.be/4YHnZSMo9vo",
+    github: "https://github.com/Sin9k/react-router-dom-tricks#popups-routes",
   },
   {
     title: "How to close pop-up via history.goBack",
@@ -44,6 +48,8 @@ export const TRICKS_ROUTES = [
     image: closePopup,
     enYouTube: "https://youtu.be/tl5_k6YBRKg",
     ruYouTube: "https://youtu.be/fqYk-b1lhyI",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#how-to-use-historygoback-for-closing-popup",
   },
   {
     title: "Custom React Router Prompts",
@@ -55,25 +61,31 @@ export const TRICKS_ROUTES = [
     image: customPrompt,
     enYouTube: "https://youtu.be/ZE5I9RbMaGY",
     ruYouTube: "https://youtu.be/qDJ2OMcz8is",
+    github: "https://github.com/Sin9k/react-router-dom-tricks#custom-prompt",
   },
   {
     title: "Redirect After Login",
     shortTitle: "Redirect After Login",
-    description: "",
+    description:
+      "In this video, we will consider another react-router trick. We’ll tell you how to restore the previous URL after a redirect. We will show you how to manage react-router properly in order to be able to create authorized pages. With the help of our demo you can find how to redirect unauthorized users to the sign in page firstly when they go to the authorized page, and only then redirect them exactly to the page that they originally wanted. And also, a lot of other interesting things!",
     url: "/restore-prevented-route",
-    Icon: RestorePage,
+    Icon: Save,
     image: redirectAfterLogin,
-    enYouTube: "",
+    enYouTube: "https://sin9k.com",
     ruYouTube: "https://youtu.be/7Ot95R_TP4g",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#redirect-after-login",
   },
   {
     title: "Perfect stepper",
     shortTitle: "Perfect stepper",
-    description: "",
+    description:
+      "On my opinion it's the best multi step form what a lot of you have ever seen. It handles a lot of edge cases of business requirements and is able to scale to your specific requirements",
     url: "/stepper",
     Icon: HdrWeak,
-    image: "",
-    enYouTube: "",
-    ruYouTube: "",
+    image: multiStepForm,
+    enYouTube: "https://sin9k.com",
+    ruYouTube: "https://sin9k.com",
+    github: "https://github.com/Sin9k/react-router-dom-tricks",
   },
 ];
