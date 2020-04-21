@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 import YouTube from "~/assets/icons/youtube.svg";
+import GitHub from "~/assets/icons/github.svg";
 import { TRICKS_ROUTES } from "~/const/tricks";
 
 import useStyles from "./styles";
+import { IconButton } from "@material-ui/core";
 
 const HomePage = () => {
   const styles = useStyles();
@@ -38,7 +40,6 @@ const HomePage = () => {
                       variant="outlined"
                       color="secondary"
                       endIcon={<YouTube width="26px" />}
-                      className={styles.youtube}
                     >
                       EN
                     </Button>
@@ -56,10 +57,23 @@ const HomePage = () => {
                       variant="outlined"
                       color="secondary"
                       endIcon={<YouTube width="26px" />}
-                      className={styles.youtube}
                     >
                       RU
                     </Button>
+                  </a>
+                )}
+
+                {Boolean(trick.github) && (
+                  <a
+                    href={trick.github}
+                    onClick={stopPropagation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                  >
+                    <IconButton>
+                      <GitHub width="26px" />
+                    </IconButton>
                   </a>
                 )}
               </p>

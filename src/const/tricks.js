@@ -21,6 +21,8 @@ export const TRICKS_ROUTES = [
     image: responsiveRoutes,
     enYouTube: "https://youtu.be/X3zE2eIpUmk",
     ruYouTube: "https://youtu.be/FtYzwa0DjW8",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#responsive-routes",
   },
   {
     title: "Managing pop-ups using react-router",
@@ -32,6 +34,7 @@ export const TRICKS_ROUTES = [
     image: popusRoutes,
     enYouTube: "https://youtu.be/RYo3kwdDdBI",
     ruYouTube: "https://youtu.be/4YHnZSMo9vo",
+    github: "https://github.com/Sin9k/react-router-dom-tricks#popups-routes",
   },
   {
     title: "How to close pop-up via history.goBack",
@@ -43,6 +46,8 @@ export const TRICKS_ROUTES = [
     image: closePopup,
     enYouTube: "https://youtu.be/tl5_k6YBRKg",
     ruYouTube: "https://youtu.be/fqYk-b1lhyI",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#how-to-use-historygoback-for-closing-popup",
   },
   {
     title: "Custom React Router Prompts",
@@ -54,6 +59,7 @@ export const TRICKS_ROUTES = [
     image: customPrompt,
     enYouTube: "https://youtu.be/ZE5I9RbMaGY",
     ruYouTube: "https://youtu.be/qDJ2OMcz8is",
+    github: "https://github.com/Sin9k/react-router-dom-tricks#custom-prompt",
   },
   {
     title: "Redirect After Login",
@@ -65,5 +71,7 @@ export const TRICKS_ROUTES = [
     image: redirectAfterLogin,
     enYouTube: "",
     ruYouTube: "https://youtu.be/7Ot95R_TP4g",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#redirect-after-login",
   },
 ];
