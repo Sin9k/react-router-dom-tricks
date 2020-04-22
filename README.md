@@ -55,7 +55,7 @@
 
 ### Redirect After Login
 
-- EN video
+- [EN video](https://youtu.be/VI3Mo6FJCZA)
 - [RU video](https://youtu.be/7Ot95R_TP4g)
 - [Router src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/RestorePreventedRoutePage/index.jsx#L21)
 - [AuthRoute src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/AuthRoute/index.jsx)
