@@ -69,7 +69,7 @@ export const TRICKS_ROUTES = [
     url: "/restore-prevented-route",
     Icon: Save,
     image: redirectAfterLogin,
-    enYouTube: "",
+    enYouTube: "https://youtu.be/VI3Mo6FJCZA",
     ruYouTube: "https://youtu.be/7Ot95R_TP4g",
     github:
       "https://github.com/Sin9k/react-router-dom-tricks#redirect-after-login",
