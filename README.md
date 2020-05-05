@@ -62,3 +62,15 @@
 - [react-router Redirect (Auth)](https://reacttraining.com/react-router/web/example/auth-workflow)
 - [SignIn src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/Login/index.jsx#L18)
 - [Switcher src](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/RestorePreventedRoute/components/Login/index.jsx#L44)
+
+### Perfect multistep form
+
+- EN video
+- [RU video](https://youtu.be/d3SH1H-shlg)
+- [step switcher](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/StepperPage/index.jsx#L33)
+- [way to change step](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/FirstStep/index.jsx#L23)
+- [react-final-form usage](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/SecondStep/index.jsx#L45)
+- [save to sessionStorage](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/services/setFormData.js)
+- [get from sessionStorage](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/services/getFormData.js)
+- [clear stepper on leave](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/StepperPage/index.jsx#L37)
+- [clear sessionStorage](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/services/clearFormData.js)
