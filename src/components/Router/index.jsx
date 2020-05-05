@@ -8,6 +8,7 @@ import PopupsRoutesPage from "~/pages/PopupsRoutes";
 import CustomPromptPage from "~/pages/CustomPrompt";
 import ClosePopupPage from "~/pages/ClosePopup";
 import RestorePreventedRoutePage from "~/pages/RestorePreventedRoute";
+import StepperPage from "~/pages/Stepper";
 
 import AppBar from "../AppBar";
 import CustomPrompt from "../CustomPrompt";
@@ -16,7 +17,7 @@ const Router = () => {
   const userConfirmation = useCallback((message, callback) => {
     const node = document.getElementById("custom-prompt");
 
-    const cleanUp = answer => {
+    const cleanUp = (answer) => {
       ReactDOM.unmountComponentAtNode(node);
       callback(answer);
     };
@@ -45,6 +46,9 @@ const Router = () => {
         </Route>
         <Route path="/restore-prevented-route">
           <RestorePreventedRoutePage />
+        </Route>
+        <Route path="/stepper">
+          <StepperPage />
         </Route>
       </Switch>
     </BrowserRouter>

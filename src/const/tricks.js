@@ -3,12 +3,14 @@ import Web from "@material-ui/icons/Web";
 import AspectRatio from "@material-ui/icons/AspectRatio";
 import Cancel from "@material-ui/icons/Cancel";
 import Save from "@material-ui/icons/Save";
+import HdrWeak from "@material-ui/icons/HdrWeak";
 
 import responsiveRoutes from "~/assets/images/responsive-routes.png";
 import popusRoutes from "~/assets/images/popus-routes.png";
 import customPrompt from "~/assets/images/custom-prompt.png";
 import closePopup from "~/assets/images/close-popup.png";
 import redirectAfterLogin from "~/assets/images/redirect-after-login.png";
+import multiStepForm from "~/assets/images/multi-step-form.png";
 
 export const TRICKS_ROUTES = [
   {
@@ -73,5 +75,17 @@ export const TRICKS_ROUTES = [
     ruYouTube: "https://youtu.be/7Ot95R_TP4g",
     github:
       "https://github.com/Sin9k/react-router-dom-tricks#redirect-after-login",
+  },
+  {
+    title: "Perfect stepper",
+    shortTitle: "Perfect stepper",
+    description:
+      "On my opinion it's the best multi step form what a lot of you have ever seen. It handles a lot of edge cases of business requirements and is able to scale to your specific requirements",
+    url: "/stepper",
+    Icon: HdrWeak,
+    image: multiStepForm,
+    enYouTube: "",
+    ruYouTube: "https://youtu.be/d3SH1H-shlg",
+    github: "https://github.com/Sin9k/react-router-dom-tricks",
   },
 ];
