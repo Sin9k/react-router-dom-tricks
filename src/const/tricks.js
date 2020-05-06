@@ -84,7 +84,7 @@ export const TRICKS_ROUTES = [
     url: "/stepper",
     Icon: HdrWeak,
     image: multiStepForm,
-    enYouTube: "",
+    enYouTube: "https://youtu.be/-j8s0RNOZ8U",
     ruYouTube: "https://youtu.be/d3SH1H-shlg",
     github: "https://github.com/Sin9k/react-router-dom-tricks",
   },
