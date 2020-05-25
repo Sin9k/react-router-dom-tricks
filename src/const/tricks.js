@@ -4,6 +4,7 @@ import AspectRatio from "@material-ui/icons/AspectRatio";
 import Cancel from "@material-ui/icons/Cancel";
 import Save from "@material-ui/icons/Save";
 import HdrWeak from "@material-ui/icons/HdrWeak";
+import DynamicFeed from "@material-ui/icons/DynamicFeed";
 
 import responsiveRoutes from "~/assets/images/responsive-routes.png";
 import popusRoutes from "~/assets/images/popus-routes.png";
@@ -28,7 +29,7 @@ export const TRICKS_ROUTES = [
   },
   {
     title: "Managing pop-ups using react-router",
-    shortTitle: "Popup Routes",
+    shortTitle: "Pop-up Routes",
     description:
       "In this video, we will show you several ways how to manage pop-ups using React-router. In our test application, you will see how to make a specific URL for your pop-ups and share links with others, how to control closing animation, and also how to deal with other problems related to managing pop-ups!",
     url: "/popups-routes",
@@ -87,5 +88,16 @@ export const TRICKS_ROUTES = [
     enYouTube: "https://youtu.be/-j8s0RNOZ8U",
     ruYouTube: "https://youtu.be/d3SH1H-shlg",
     github: "https://github.com/Sin9k/react-router-dom-tricks",
+  },
+  {
+    title: "Managing two pop-ups at the same time using react-router",
+    shortTitle: "Two pop-ups at the same time",
+    description: "",
+    url: "/two-popups",
+    Icon: DynamicFeed,
+    image: null,
+    enYouTube: "",
+    ruYouTube: "",
+    github: "",
   },
 ];

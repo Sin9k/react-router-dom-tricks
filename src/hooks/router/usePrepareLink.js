@@ -6,14 +6,14 @@ export default ({
   query = {},
   hash,
   keepOldQuery = false,
-  state = {}
+  state = {},
 }) => {
   const location = useLocation();
   const match = useRouteMatch();
 
   let pathname;
 
-  if (isRelativePath) {
+  if (match && isRelativePath) {
     pathname = match.url + to;
   } else {
     pathname = to || location.pathname;
@@ -31,6 +31,6 @@ export default ({
     pathname: pathname.replace(/\/\//g, "/"),
     search: newQuery.toString() ? `?${newQuery.toString()}` : "",
     hash,
-    state
+    state,
   };
 };

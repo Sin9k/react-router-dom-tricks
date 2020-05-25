@@ -9,6 +9,7 @@ import CustomPromptPage from "~/pages/CustomPrompt";
 import ClosePopupPage from "~/pages/ClosePopup";
 import RestorePreventedRoutePage from "~/pages/RestorePreventedRoute";
 import StepperPage from "~/pages/Stepper";
+import TwoPopupsPage from "~/pages/TwoPopups";
 
 import AppBar from "../AppBar";
 import CustomPrompt from "../CustomPrompt";
@@ -49,6 +50,9 @@ const Router = () => {
         </Route>
         <Route path="/stepper">
           <StepperPage />
+        </Route>
+        <Route path="/two-popups">
+          <TwoPopupsPage />
         </Route>
       </Switch>
     </BrowserRouter>
