@@ -7,13 +7,15 @@ export default makeStyles((theme) => ({
   },
   title: {
     marginTop: 0,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   grid: {
     display: "grid",
     "grid-template-columns": "220px 220px",
     "grid-gap": 10,
   },
-
   button: {
     border: "none",
     padding: 0,

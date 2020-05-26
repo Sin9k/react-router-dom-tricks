@@ -21,21 +21,21 @@ const Post = () => {
 
   const signInLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn,
+    },
   });
   const signUpLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp,
+    },
   });
   const notificationsLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications,
+    },
   });
 
-  const post = posts.find(post => post.id === parseInt(id));
+  const post = posts.find((post) => post.id === parseInt(id));
 
   if (!post) {
     return null;
