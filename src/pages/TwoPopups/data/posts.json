@@ -115,6 +115,40 @@
         "id": 11,
         "title": "Mike Ozashvili"
       }
+    ],
+    "pictures": [
+      {
+        "id": 9,
+        "url": "https://picsum.photos/id/99/1100/600"
+      },
+      {
+        "id": 10,
+        "url": "https://picsum.photos/id/109/1100/600"
+      },
+      {
+        "id": 11,
+        "url": "https://picsum.photos/id/119/1100/600"
+      },
+      {
+        "id": 12,
+        "url": "https://picsum.photos/id/129/1100/600"
+      },
+      {
+        "id": 13,
+        "url": "https://picsum.photos/id/139/1100/600"
+      },
+      {
+        "id": 14,
+        "url": "https://picsum.photos/id/149/1100/600"
+      },
+      {
+        "id": 15,
+        "url": "https://picsum.photos/id/159/1100/600"
+      },
+      {
+        "id": 16,
+        "url": "https://picsum.photos/id/169/1100/600"
+      }
     ]
   },
   {
@@ -176,6 +210,40 @@
       {
         "id": 20,
         "title": "Alexander Baltsevich"
+      }
+    ],
+    "pictures": [
+      {
+        "id": 17,
+        "url": "https://picsum.photos/id/179/1100/600"
+      },
+      {
+        "id": 18,
+        "url": "https://picsum.photos/id/189/1100/600"
+      },
+      {
+        "id": 19,
+        "url": "https://picsum.photos/id/199/1100/600"
+      },
+      {
+        "id": 20,
+        "url": "https://picsum.photos/id/209/1100/600"
+      },
+      {
+        "id": 21,
+        "url": "https://picsum.photos/id/219/1100/600"
+      },
+      {
+        "id": 22,
+        "url": "https://picsum.photos/id/229/1100/600"
+      },
+      {
+        "id": 23,
+        "url": "https://picsum.photos/id/239/1100/600"
+      },
+      {
+        "id": 24,
+        "url": "https://picsum.photos/id/249/1100/600"
       }
     ]
   }
