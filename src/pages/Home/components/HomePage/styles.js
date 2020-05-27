@@ -10,6 +10,7 @@ export default makeStyles(() => ({
     marginBottom: 16,
     textDecoration: "none",
     maxWidth: 850,
+    position: "relative",
     "&:hover": {
       backgroundColor: "#E8E8E8",
     },
@@ -18,6 +19,13 @@ export default makeStyles(() => ({
       flexDirection: "column",
       margin: "0 auto 30px",
     },
+  },
+  cardLink: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
   },
   info: {
     overflow: "hidden",
