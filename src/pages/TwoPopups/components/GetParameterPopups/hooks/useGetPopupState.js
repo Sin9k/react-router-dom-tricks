@@ -6,20 +6,26 @@ import useGetParameter from "~/hooks/router/useGetParameter";
 
 let timeout;
 
+function parseStringifiedValue(value) {
+  return value ? value.split(",") : [];
+}
+
 export default () => {
-  const popupName = useGetParameter(GET_PARAMS.popup);
-  const [mountedPopup, setMountedPopup] = useState(popupName);
+  const rawPopups = useGetParameter(GET_PARAMS.popup);
+  const [mountedPopups, setMountedPopups] = useState(
+    parseStringifiedValue(rawPopups)
+  );
 
   useEffect(() => {
-    if (popupName) {
+    if (rawPopups) {
       timeout && clearTimeout(timeout);
-      setMountedPopup(popupName);
+      setMountedPopups(rawPopups.split(","));
     } else {
       timeout = setTimeout(() => {
-        setMountedPopup(null);
+        setMountedPopups([]);
       }, 300);
     }
-  }, [popupName]);
+  }, [rawPopups]);
 
   useEffect(() => {
     return () => {
@@ -27,10 +33,10 @@ export default () => {
     };
   }, []);
 
-  const isOpened = useMemo(() => Boolean(popupName), [popupName]);
+  const popups = useMemo(() => parseStringifiedValue(rawPopups), [rawPopups]);
 
   return {
-    mountedPopup,
-    isOpened
+    mountedPopups,
+    popups,
   };
 };

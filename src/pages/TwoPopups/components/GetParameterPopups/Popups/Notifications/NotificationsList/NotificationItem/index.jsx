@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 
 import usePrepareLink from "~/hooks/router/usePrepareLink";
-import { GET_PARAMS } from "~/const/router";
+import { GET_PARAMS, GET_ENUMS } from "~/const/router";
 
 import useStyles from "./styles";
 
@@ -17,9 +17,12 @@ const NotificationsItem = ({ notification }) => {
 
   const link = usePrepareLink({
     query: {
-      [GET_PARAMS.notificationId]: notification.id
+      [GET_PARAMS.notificationId]: notification.id,
     },
-    keepOldQuery: true
+    pushToQuery: {
+      [GET_PARAMS.popup]: GET_ENUMS.popup.notificationDetails,
+    },
+    keepOldQuery: true,
   });
 
   return (
@@ -28,10 +31,13 @@ const NotificationsItem = ({ notification }) => {
       component={Link}
       to={link}
       className={styles.item}
-      replace
     >
       <ListItemAvatar>
-        <Avatar alt={notification.title} src={notification.image} />
+        <Avatar
+          alt={notification.title}
+          src={notification.avatar}
+          className={styles.avatar}
+        />
       </ListItemAvatar>
       <ListItemText
         primary={notification.title}
@@ -45,6 +51,7 @@ const NotificationsItem = ({ notification }) => {
             >
               {notification.user}
             </Typography>
+            <br />
             {notification.shortText}
           </React.Fragment>
         }

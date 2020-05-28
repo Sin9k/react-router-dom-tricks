@@ -20,18 +20,18 @@ const Posts = () => {
 
   const signInLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signIn,
+    },
   });
   const signUpLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.signUp,
+    },
   });
   const notificationsLink = usePrepareLink({
     query: {
-      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications
-    }
+      [GET_PARAMS.popup]: GET_ENUMS.popup.notifications,
+    },
   });
 
   return (
@@ -65,7 +65,7 @@ const Posts = () => {
         </Button>
       </div>
       <div className={styles.posts}>
-        {posts.map(post => {
+        {posts.map((post) => {
           return (
             <Card
               className={styles.card}

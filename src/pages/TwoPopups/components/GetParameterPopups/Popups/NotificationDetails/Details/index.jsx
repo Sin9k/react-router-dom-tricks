@@ -8,11 +8,11 @@ import Avatar from "@material-ui/core/Avatar";
 import notifications from "../../../../../data/notifications";
 import useStyles from "./styles";
 
-const NotificationDetails = ({ notificationId }) => {
+const Details = ({ notificationId }) => {
   const styles = useStyles();
 
   const notification = notifications.find(
-    notification => parseInt(notificationId) === notification.id
+    (notification) => parseInt(notificationId) === notification.id
   );
 
   if (!notification) {
@@ -24,11 +24,14 @@ const NotificationDetails = ({ notificationId }) => {
       <CardContent>
         <Avatar
           alt={notification.title}
-          src={notification.image}
+          src={notification.avatar}
           className={styles.large}
         />
         <Typography variant="h5" component="h2" className={styles.title}>
           {notification.title}
+        </Typography>
+        <Typography variant="h5" component="h2" className={styles.title}>
+          {notification.user}
         </Typography>
         <Typography variant="body2" component="p">
           {notification.fullText}
@@ -38,4 +41,4 @@ const NotificationDetails = ({ notificationId }) => {
   );
 };
 
-export default NotificationDetails;
+export default Details;

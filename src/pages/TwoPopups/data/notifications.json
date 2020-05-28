@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "avatar": "",
+    "avatar": "https://picsum.photos/id/500/200/200",
     "title": "Brunch this weekend?",
     "user": "Ali Connors",
     "shortText": "I'll be in your neighborhood doing errands in this…",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "avatar": "",
+    "avatar": "https://picsum.photos/id/600/200/200",
     "title": "Summer BBQ",
     "user": "to Scott, Alex, Jennifer",
     "shortText": "Wish I could come, but I'm out of town this…",
@@ -17,10 +17,50 @@
   },
   {
     "id": 3,
-    "avatar": "",
+    "avatar": "https://picsum.photos/id/700/200/200",
     "title": "Oui Oui",
     "user": "Sandra Adams",
     "shortText": "Do you have Paris recommendations? Have you ever…",
     "fullText": "Do you have Paris recommendations? Have you ever been in Belarus? or it's not important for you today?"
+  },
+  {
+    "id": 4,
+    "avatar": "https://picsum.photos/id/800/200/200",
+    "title": "Bal Bal",
+    "user": "Honder Adams",
+    "shortText": "Lorem Ipsum is simply dummy text of the printing…",
+    "fullText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    "id": 5,
+    "avatar": "https://picsum.photos/id/900/200/200",
+    "title": "Veron Cas",
+    "user": "Zimba Vlad",
+    "shortText": "It is a long established fact that a reader will…",
+    "fullText": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'"
+  },
+  {
+    "id": 6,
+    "avatar": "https://picsum.photos/id/1000/200/200",
+    "title": "Rokin Sli",
+    "user": "Fill Forken",
+    "shortText": "Contrary to popular belief, Lorem Ipsum is not simply…",
+    "fullText": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur"
+  },
+  {
+    "id": 7,
+    "avatar": "https://picsum.photos/id/100/200/200",
+    "title": "Vobla Fen",
+    "user": "Zerg Son",
+    "shortText": "There are many variations of passages of Lorem Ipsum…",
+    "fullText": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable"
+  },
+  {
+    "id": 8,
+    "avatar": "https://picsum.photos/id/200/200/200",
+    "title": "Flow Gan",
+    "user": "Grand Slen",
+    "shortText": "The standard chunk of Lorem Ipsum used since the 1500s…",
+    "fullText": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
   }
 ]
