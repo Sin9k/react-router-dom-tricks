@@ -34,6 +34,7 @@ export default makeStyles(() => ({
     padding: "6px 0",
   },
   image: {
+    flexShrink: 0,
     width: 300,
     marginRight: 16,
     "@media (max-width: 750px)": {
