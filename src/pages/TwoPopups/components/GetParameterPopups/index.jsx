@@ -2,7 +2,7 @@ import React from "react";
 
 import { GET_ENUMS } from "~/const/router";
 
-import useGetPopupState from "./hooks/useGetPopupState";
+import useGetPopupsState from "./hooks/useGetPopupsState";
 import SignIn from "./Popups/SignIn";
 import SignUp from "./Popups/SignUp";
 import Notifications from "./Popups/Notifications";
@@ -16,7 +16,7 @@ const mappedPopups = {
 };
 
 const GetParameterPopups = () => {
-  const { mountedPopups, popups } = useGetPopupState();
+  const { mountedPopups, popups } = useGetPopupsState();
 
   return mountedPopups.map((mountedPopup) => {
     const Component = mappedPopups[mountedPopup];
