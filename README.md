@@ -65,7 +65,7 @@
 
 ### Perfect multistep form
 
-- EN video
+- [EN video](https://youtu.be/-j8s0RNOZ8U)
 - [RU video](https://youtu.be/d3SH1H-shlg)
 - [step switcher](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/StepperPage/index.jsx#L33)
 - [way to change step](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/Stepper/components/FirstStep/index.jsx#L23)
