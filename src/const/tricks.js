@@ -12,6 +12,7 @@ import customPrompt from "~/assets/images/custom-prompt.png";
 import closePopup from "~/assets/images/close-popup.png";
 import redirectAfterLogin from "~/assets/images/redirect-after-login.png";
 import multiStepForm from "~/assets/images/multi-step-form.png";
+import twoPopups from "~/assets/images/two-popups.png";
 
 export const TRICKS_ROUTES = [
   {
@@ -95,7 +96,7 @@ export const TRICKS_ROUTES = [
     description: "",
     url: "/two-popups",
     Icon: DynamicFeed,
-    image: null,
+    image: twoPopups,
     enYouTube: "",
     ruYouTube: "",
     github: "",

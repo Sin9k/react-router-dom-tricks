@@ -5,6 +5,7 @@ export default makeStyles(() => ({
     padding: 0,
     border: "none",
     cursor: "pointer",
-    height: 600,
+    height: 400,
+    overflow: "hidden",
   },
 }));

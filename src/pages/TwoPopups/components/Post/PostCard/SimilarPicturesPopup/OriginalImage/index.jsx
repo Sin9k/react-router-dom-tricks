@@ -18,7 +18,7 @@ const OriginalImage = ({ pictures }) => {
 
   return (
     <button onClick={history.goBack} className={styles.container}>
-      <img src={picture.url} width={1100} height={600} alt="original" />
+      <img src={picture.url} width={700} height={400} alt="original" />
     </button>
   );
 };
