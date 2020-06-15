@@ -93,7 +93,8 @@ export const TRICKS_ROUTES = [
   {
     title: "Managing two pop-ups at the same time using react-router",
     shortTitle: "Two pop-ups at the same time",
-    description: "",
+    description:
+      "We figured out how to manage pop-ups using react-router in one of the previous tricks. But it's not covered all cases and now we will consider how to manage two or more pop-ups at the same time via react-router.",
     url: "/two-popups",
     Icon: DynamicFeed,
     image: twoPopups,
