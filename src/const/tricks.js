@@ -99,7 +99,8 @@ export const TRICKS_ROUTES = [
     Icon: DynamicFeed,
     image: twoPopups,
     enYouTube: "",
-    ruYouTube: "",
-    github: "",
+    ruYouTube: "https://youtu.be/pDDtOwETx_0",
+    github:
+      "https://github.com/Sin9k/react-router-dom-tricks#managing-two-or-more-pop-ups-via-react-router",
   },
 ];
