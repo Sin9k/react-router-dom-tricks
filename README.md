@@ -83,7 +83,7 @@
 
 ### Managing two or more pop-ups via react-router
 
-- EN video
+- [EN video](https://youtu.be/cWke1z6VgxM)
 - [RU video](https://youtu.be/pDDtOwETx_0)
 - [whole src](https://github.com/Sin9k/react-router-dom-tricks/tree/master/src/pages/TwoPopups)
 - [FullScreen pop-up inside Similar Pictures](https://github.com/Sin9k/react-router-dom-tricks/blob/master/src/pages/TwoPopups/components/Post/PostCard/SimilarPicturesPopup/index.jsx#L59)
