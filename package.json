@@ -2,7 +2,7 @@
   "name": "react-router-dom-tricks",
   "homepage": "https://sin9k.github.io",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/core": "7.7.4",
     "@material-ui/core": "^4.8.3",
